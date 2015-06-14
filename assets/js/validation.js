@@ -26,6 +26,10 @@ $(document).ready(function(){
 	      	required: true,
 	      	password: true
 	      },
+	      publisher: {
+		minlength: 2,
+	      	required: true
+	      },
 	        username: {
 	        minlength: 2,
 	        username: true,
@@ -35,6 +39,10 @@ $(document).ready(function(){
 	        minlength: 2,
 	        required: true
 	      },
+          publisher: {
+            minlength: 2,
+            required: true
+          },
 	      isbn: {
 	      	isbn: true,
 	        required: true
@@ -56,6 +64,7 @@ $(document).ready(function(){
 	        required: true
 	      }
 	    },
+	    submitHandler: function(form) { ConvertFormToJSON('#contact-form'); },
 			highlight: function(element) {
 				$(element).closest('.form-group').removeClass('has-success').addClass('has-error');
 			},
